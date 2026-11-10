@@ -87,10 +87,7 @@
       line-height: 1.65;
       font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem); /* 17px–19px fluid body */
       overflow-x: hidden;
-      background-image: 
-        radial-gradient(circle at 12% 8%, rgba(245, 166, 35, 0.12) 0%, transparent 38%),
-        radial-gradient(circle at 88% 18%, rgba(217, 67, 48, 0.08) 0%, transparent 35%),
-        radial-gradient(circle at 50% 65%, rgba(30, 107, 158, 0.06) 0%, transparent 45%);
+      background-color: var(--bg-cream);
     }
 
     /* Custom Accessible Focus Styles */
@@ -300,21 +297,20 @@
     .tagline-pill {
       padding: 0.35rem 1rem;
       border-radius: var(--radius-pill);
-      border: 2px solid var(--text-ink);
-      background: var(--bg-card);
-      box-shadow: 3px 3px 0 var(--text-ink);
+      border: 1px solid var(--border-warm);
+      background: var(--bg-butter);
     }
 
     .tagline-pill--sun {
-      background: #FFE599;
+      background: #FFF3CC;
     }
 
     .tagline-pill--coral {
-      background: #FFD6CE;
+      background: #FFE8E2;
     }
 
     .tagline-pill--sky {
-      background: #D4ECF9;
+      background: #E8F4FC;
     }
 
     .hero-lead {
@@ -342,29 +338,29 @@
       border-radius: var(--radius-pill);
       cursor: pointer;
       transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
-      border: 2px solid var(--text-ink);
+      border: 1px solid transparent;
     }
 
     .btn-primary {
       background: var(--accent-sun);
       color: var(--text-ink);
-      box-shadow: 4px 4px 0 var(--text-ink);
+      box-shadow: var(--shadow-soft);
     }
 
     .btn-primary:hover {
-      transform: translate(-2px, -2px);
-      box-shadow: 6px 6px 0 var(--text-ink);
+      transform: translateY(-2px);
       background: #FFB732;
     }
 
     .btn-secondary {
       background: var(--bg-card);
       color: var(--text-ink);
-      box-shadow: 4px 4px 0 var(--border-warm);
+      border-color: var(--border-warm);
+      box-shadow: var(--shadow-soft);
     }
 
     .btn-secondary:hover {
-      transform: translate(-2px, -2px);
+      transform: translateY(-2px);
       border-color: var(--accent-coral);
       color: var(--accent-coral);
     }
@@ -409,35 +405,10 @@
       aspect-ratio: 4 / 5;
       border-radius: var(--radius-lg);
       overflow: hidden;
-      border: 3px solid var(--text-ink);
-      box-shadow: 12px 12px 0 var(--accent-sun);
+      border: 1px solid var(--border-warm);
+      box-shadow: var(--shadow-soft);
       background: var(--bg-butter);
       cursor: pointer;
-    }
-
-    .hero-badge-floating {
-      position: absolute;
-      bottom: -18px;
-      left: -18px;
-      background: var(--bg-card);
-      border: 2px solid var(--text-ink);
-      border-radius: var(--radius-md);
-      padding: 0.9rem 1.2rem;
-      box-shadow: 6px 6px 0 var(--accent-coral);
-      max-width: 260px;
-      z-index: 3;
-    }
-
-    .hero-badge-floating strong {
-      display: block;
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      color: var(--text-ink);
-    }
-
-    .hero-badge-floating span {
-      font-size: 0.85rem;
-      color: var(--text-muted);
     }
 
     /* ==========================================================================
@@ -719,10 +690,10 @@
 
     .pull-quote-card {
       background: var(--bg-butter);
-      border: 3px solid var(--text-ink);
+      border: 1px solid var(--border-warm);
       border-radius: var(--radius-lg);
       padding: clamp(1.75rem, 3.5vw, 3rem);
-      box-shadow: 10px 10px 0 var(--accent-coral);
+      box-shadow: var(--shadow-soft);
       position: relative;
     }
 
@@ -780,10 +751,10 @@
 
     .pillar-card {
       background: var(--bg-card);
-      border: 2px solid var(--text-ink);
+      border: 1px solid var(--border-warm);
       border-radius: var(--radius-md);
       padding: var(--space-2);
-      box-shadow: 4px 4px 0 var(--accent-sun);
+      box-shadow: var(--shadow-soft);
     }
 
     .pillar-card h3 {
@@ -874,17 +845,17 @@
 
     .exp-card {
       background: var(--bg-card);
-      border: 2px solid var(--text-ink);
+      border: 1px solid var(--border-warm);
       border-radius: var(--radius-md);
       padding: var(--space-4);
-      box-shadow: 6px 6px 0 var(--border-warm);
+      box-shadow: var(--shadow-soft);
       display: flex;
       flex-direction: column;
       gap: var(--space-2);
     }
 
     .exp-card--highlight {
-      box-shadow: 6px 6px 0 var(--accent-sun);
+      border-top: 4px solid var(--accent-sun);
     }
 
     .exp-role-meta {
@@ -931,7 +902,7 @@
     .contact-section {
       padding-block: var(--space-12);
       background: var(--bg-butter);
-      border-top: 3px solid var(--text-ink);
+      border-top: 1px solid var(--border-warm);
       text-align: center;
     }
 
@@ -939,10 +910,10 @@
       max-width: 760px;
       margin-inline: auto;
       background: var(--bg-card);
-      border: 3px solid var(--text-ink);
+      border: 1px solid var(--border-warm);
       border-radius: var(--radius-lg);
       padding: clamp(2rem, 5vw, 4rem);
-      box-shadow: 12px 12px 0 var(--accent-sun);
+      box-shadow: var(--shadow-soft);
     }
 
     .contact-card p {
@@ -1175,8 +1146,7 @@
       <nav aria-label="Primary Navigation">
         <ul class="nav-links" id="primaryNav">
           <li><a href="#videos">Watch</a></li>
-          <li><a href="#story">My Story</a></li>
-          <li><a href="#gallery">Photos</a></li>
+          <li><a href="#story">About</a></li>
           <li><a href="#experience">Experience</a></li>
           <li><a href="#contact" class="nav-cta">Say Hello</a></li>
         </ul>
@@ -1189,35 +1159,26 @@
     <section class="hero container">
       <div class="hero-grid">
         <div class="hero-content reveal">
-          <span class="eyebrow">Provo, Utah • 5+ Years in Motion</span>
+          <span class="eyebrow">Provo, Utah • Dance Artist &amp; Educator</span>
           <h1 class="display-title">Emily W.</h1>
 
           <div class="hero-tagline" aria-label="Choreographer. Freestyle Artist. Mover.">
-            <span class="tagline-pill tagline-pill--sun">Choreographer.</span>
-            <span class="tagline-pill tagline-pill--coral">Freestyle Artist.</span>
-            <span class="tagline-pill tagline-pill--sky">Mover.</span>
+            <span class="tagline-pill tagline-pill--sun">Choreographer</span>
+            <span class="tagline-pill tagline-pill--coral">Freestyle Artist</span>
+            <span class="tagline-pill tagline-pill--sky">Mover</span>
           </div>
 
           <p class="hero-lead">
-            From the magic of Ballroom partnering and the percussive spark of Tap &amp; Clogging to global Folk traditions—even choreographing an aerial routine in tap shoes to <em>Singin’ in the Rain</em>.
+            From the magic of Ballroom partnering and the percussive spark of Tap &amp; Clogging to global Folk traditions—including an original aerial routine in tap shoes to <em>Singin’ in the Rain</em>.
           </p>
 
           <div class="hero-actions">
             <a href="#videos" class="btn btn-primary">
-              Watch My Reel (3 Videos)
+              Watch My Reel
             </a>
             <a href="#contact" class="btn btn-secondary">
-              Book or Collaborate
+              Get in Touch
             </a>
-          </div>
-
-          <div class="style-ribbon" aria-label="Core Dance Styles">
-            <span class="style-ribbon-label">Core Styles:</span>
-            <span class="style-tag">Ballroom &amp; Swing</span>
-            <span class="style-tag">International Folk</span>
-            <span class="style-tag">Tap &amp; Clogging</span>
-            <span class="style-tag">Aerial Tap</span>
-            <span class="style-tag">Jazz &amp; Contemporary</span>
           </div>
         </div>
 
@@ -1234,20 +1195,11 @@
               <img src="media/Indian Costume.jpg" 
                    alt="Emily W. and her dance partner smiling in vibrant red, pink, and emerald green Indian folk dance costumes with raised mudra hands in a studio."
                    onload="this.parentElement.classList.remove('is-fallback')"
-                   onerror="if(!this.dataset.triedAlt){this.dataset.triedAlt='1';this.src='images/folk-duet.jpg';}else{this.parentElement.classList.add('is-fallback');}">
+                   onerror="if(!this.dataset.triedRoot){this.dataset.triedRoot='1';this.src='Indian Costume.jpg';}else if(!this.dataset.triedAlt){this.dataset.triedAlt='1';this.src='images/folk-duet.jpg';}else{this.parentElement.classList.add('is-fallback');}">
               
-              <div class="fallback-top">
-                <span class="fallback-filename">media/Indian Costume.jpg</span>
-                <span class="fallback-filename">Hero Portrait</span>
-              </div>
-
               <div class="fallback-art">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <circle cx="12" cy="5" r="2.5"/>
-                  <path d="M7 11c2.5-1.5 7.5-1.5 10 0l-2.5 5.5 2.5 4.5M9.5 16.5L7 21"/>
-                </svg>
                 <div class="fallback-title">Folk Dance Studio Duet</div>
-                <p class="fallback-desc">Your Indian folk costume photo in crimson, magenta, emerald &amp; gold.</p>
+                <p class="fallback-desc">Place <code>Indian Costume.jpg</code> in your folder to display.</p>
               </div>
 
               <div class="photo-caption-overlay">
@@ -1255,11 +1207,6 @@
                 <span class="zoom-pill">Enlarge</span>
               </div>
             </div>
-          </div>
-
-          <div class="hero-badge-floating">
-            <strong>“Singin’ in the Rain” Energy</strong>
-            <span>Tap Club President • BYU BA in Dance • Instructor</span>
           </div>
         </div>
       </div>
@@ -1283,9 +1230,10 @@
           <article class="video-card video-card--featured reveal">
             <div class="video-embed-wrap">
               <iframe 
-                src="https://www.youtube-nocookie.com/embed/BGi-iOTSmKs?rel=0" 
+                src="https://www.youtube.com/embed/BGi-iOTSmKs?rel=0" 
                 title="Emily W. — Aerial Dance in Tap Shoes to Singin' in the Rain"
                 loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
               </iframe>
@@ -1308,9 +1256,10 @@
           <article class="video-card video-card--half reveal">
             <div class="video-embed-wrap">
               <iframe 
-                src="https://www.youtube-nocookie.com/embed/QNkdfyxl87I?rel=0" 
+                src="https://www.youtube.com/embed/QNkdfyxl87I?rel=0" 
                 title="Emily W. — Flamenco Folk Dance Performance"
                 loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
               </iframe>
@@ -1333,9 +1282,10 @@
           <article class="video-card video-card--half reveal">
             <div class="video-embed-wrap">
               <iframe 
-                src="https://www.youtube-nocookie.com/embed/EI1Eb7gN01M?rel=0" 
+                src="https://www.youtube.com/embed/EI1Eb7gN01M?rel=0" 
                 title="Emily W. — Jazz Midterm Performance"
                 loading="lazy"
+                referrerpolicy="strict-origin-when-cross-origin"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
                 allowfullscreen>
               </iframe>
@@ -1423,160 +1373,11 @@
       </div>
     </section>
 
-    <!-- ======================= PHOTO GALLERY SECTION ======================= -->
-    <section id="gallery" class="gallery-section">
-      <div class="container">
-        <div class="gallery-header reveal">
-          <div>
-            <span class="eyebrow">Visual Spread • Click Any Frame to Enlarge</span>
-            <h2 class="section-title">Moments from the Studio &amp; Stage</h2>
-          </div>
-          <p>
-            Ready for your photos in the <code>images/</code> folder—with custom Technicolor cards holding any spot until you drop a picture in.
-          </p>
-        </div>
-
-        <div class="magazine-grid">
-          <!-- Photo 1: Folk Dance Duet (Uploaded Photo 1) -->
-          <div class="gallery-item gallery-item--tall gallery-trigger reveal"
-               tabindex="0"
-               role="button"
-               data-slot-target="folk-duet"
-               data-img="media/Indian Costume.jpg"
-               data-title="Indian Folk Costume — Studio Rehearsal"
-               data-caption="Back-to-back mudra pose in traditional red, magenta, and emerald green Indian folk attire.">
-            <div class="photo-slot photo-slot--emerald is-fallback">
-              <img src="media/Indian Costume.jpg"
-                   loading="lazy"
-                   alt="Emily W. and a fellow dancer posing back-to-back in ornate crimson, magenta, and emerald Indian folk costumes during rehearsal."
-                   onload="this.parentElement.classList.remove('is-fallback')"
-                   onerror="if(!this.dataset.triedAlt){this.dataset.triedAlt='1';this.src='images/folk-duet.jpg';}else{this.parentElement.classList.add('is-fallback');}">
-              <div class="fallback-top">
-                <span class="fallback-filename">media/Indian Costume.jpg</span>
-                <span class="fallback-filename">Photo 01</span>
-              </div>
-              <div class="fallback-art">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/>
-                </svg>
-                <div class="fallback-title">Indian Folk Duet</div>
-                <p class="fallback-desc">Your uploaded studio rehearsal photo in jewel-toned folk dress.</p>
-              </div>
-              <div class="photo-caption-overlay">
-                <span>01 • International Folk Studio Duet</span>
-                <span class="zoom-pill">View</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Photo 2: Tap / Clogging Action Shot (Uploaded Photo 2) -->
-          <div class="gallery-item gallery-item--square gallery-trigger reveal"
-               tabindex="0"
-               role="button"
-               data-slot-target="tap-action"
-               data-img="images/tap-action.jpg"
-               data-title="Tap & Clogging Footwork in Action"
-               data-caption="Mid-step percussive footwork in white tap/clogging shoes in the rehearsal studio.">
-            <div class="photo-slot photo-slot--sky is-fallback">
-              <img src="images/tap-action.jpg"
-                   loading="lazy"
-                   alt="Emily W. dancing mid-step in white tap and clogging shoes against a geometric studio wall."
-                   onload="this.parentElement.classList.remove('is-fallback')"
-                   onerror="this.parentElement.classList.add('is-fallback')">
-              <div class="fallback-top">
-                <span class="fallback-filename">images/tap-action.jpg</span>
-                <span class="fallback-filename">Photo 02</span>
-              </div>
-              <div class="fallback-art">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M4 16l6-6 4 4 6-8"/>
-                  <circle cx="20" cy="6" r="2"/>
-                </svg>
-                <div class="fallback-title">Tap &amp; Clogging Footwork</div>
-                <p class="fallback-desc">Your uploaded action screenshot in white tap/clogging shoes.</p>
-              </div>
-              <div class="photo-caption-overlay">
-                <span>02 • Rhythm Tap &amp; Clogging Action</span>
-                <span class="zoom-pill">View</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Photo 3: Ballroom Feature Slot -->
-          <div class="gallery-item gallery-item--wide gallery-trigger reveal"
-               tabindex="0"
-               role="button"
-               data-slot-target="ballroom-feature"
-               data-img="images/ballroom-feature.jpg"
-               data-title="Ballroom Partnering & Dancesport"
-               data-caption="Rumba, Samba, Quickstep, Foxtrot & Cha-Cha partnering.">
-            <div class="photo-slot photo-slot--coral is-fallback">
-              <img src="images/ballroom-feature.jpg"
-                   loading="lazy"
-                   alt="Emily W. performing a ballroom dance partnering routine."
-                   onload="this.parentElement.classList.remove('is-fallback')"
-                   onerror="this.parentElement.classList.add('is-fallback')">
-              <div class="fallback-top">
-                <span class="fallback-filename">images/ballroom-feature.jpg</span>
-                <span class="fallback-filename">Photo 03 (Optional)</span>
-              </div>
-              <div class="fallback-art">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/>
-                </svg>
-                <div class="fallback-title">The Magic of Ballroom</div>
-                <p class="fallback-desc">Optional slot: drop in a favorite Ballroom partnering photo or video still anytime.</p>
-              </div>
-              <div class="photo-caption-overlay">
-                <span>03 • Ballroom &amp; Vintage Swing</span>
-                <span class="zoom-pill">View</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Photo 4: Aerial Tap Feature Slot -->
-          <div class="gallery-item gallery-item--portrait gallery-trigger reveal"
-               tabindex="0"
-               role="button"
-               data-slot-target="aerial-feature"
-               data-img="images/aerial-feature.jpg"
-               data-title="Aerial Choreography in Tap Shoes"
-               data-caption="Original aerial routine performed to Singin' in the Rain.">
-            <div class="photo-slot is-fallback">
-              <img src="images/aerial-feature.jpg"
-                   loading="lazy"
-                   alt="Emily W. performing an aerial routine wearing tap shoes."
-                   onload="this.parentElement.classList.remove('is-fallback')"
-                   onerror="this.parentElement.classList.add('is-fallback')">
-              <div class="fallback-top">
-                <span class="fallback-filename">images/aerial-feature.jpg</span>
-                <span class="fallback-filename">Photo 04 (Optional)</span>
-              </div>
-              <div class="fallback-art">
-                <svg viewBox="0 0 24 24" aria-hidden="true">
-                  <path d="M12 2v20M7 7l5-5 5 5M8 14c2 2 6 2 8 0"/>
-                </svg>
-                <div class="fallback-title">Aerial Tap Showstopper</div>
-                <p class="fallback-desc">Optional slot: save a still frame from your “Singin’ in the Rain” aerial video as <code>aerial-feature.jpg</code>.</p>
-              </div>
-              <div class="photo-caption-overlay">
-                <span>04 • Aerial Dance in Tap Shoes</span>
-                <span class="zoom-pill">View</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- ======================= EXPERIENCE & TRAINING SECTION ======================= -->
     <section id="experience" class="experience-section container">
       <div class="reveal">
         <span class="eyebrow">Stage, Studio &amp; Classroom</span>
-        <h2 class="section-title">Experience &amp; Artistic Highlights</h2>
-        <p>
-          Combining collegiate dance pedagogy at Brigham Young University with competitive Ballroom, international stage productions, and youth dance instruction.
-        </p>
+        <h2 class="section-title">Experience &amp; Highlights</h2>
       </div>
 
       <div class="exp-grid">
@@ -1631,21 +1432,9 @@
           <h3>Bachelor of Arts in Dance</h3>
           <ul class="exp-list">
             <li>Comprehensive pedagogical training in teaching methodology for children, teens, and adults.</li>
-            <li>Specialized coursework in choreography, aerial arts, multi-genre technique, and performance nutrition for dancers and endurance athletes.</li>
+            <li>Specialized coursework in choreography, aerial arts, multi-genre technique, and performance nutrition.</li>
           </ul>
         </article>
-      </div>
-
-      <!-- Creative Edge Banner -->
-      <div class="superpower-banner reveal">
-        <div>
-          <span class="eyebrow">Beyond the Dance Floor</span>
-          <h3 style="font-size: 1.4rem; margin-bottom: 0.25rem;">A Photographer’s Eye + A Marathoner’s Stamina</h3>
-          <p style="color: var(--text-muted);">
-            With 5+ years as a professional portrait &amp; event photographer (Adobe Lightroom specialist), marathon &amp; triathlon finisher, and conversational American Sign Language (ASL) speaker, I bring visual storytelling and boundless energy to every project.
-          </p>
-        </div>
-        <a href="#contact" class="btn btn-primary">Let’s Work Together</a>
       </div>
     </section>
 
