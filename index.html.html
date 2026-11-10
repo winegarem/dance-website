@@ -1,0 +1,1833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emily W. — Choreographer. Freestyle Artist. Mover.</title>
+  <meta name="description" content="Official dance portfolio of Emily Winegar (Emily W.) — Ballroom, International Folk, Tap, Clogging, and Aerial Dance artist and instructor based in Provo, Utah.">
+  
+  <!-- Emoji Favicon: Dancers & Sparkle -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💃</text></svg>">
+
+  <!-- Google Fonts: Fraunces (Joyful Editorial Display) & Plus Jakarta Sans (Clean Readable Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,600;0,9..144,800;1,9..144,600&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. DESIGN TOKENS & PALETTE ("Technicolor Sunshine" — Strictly No Purple)
+       ========================================================================== */
+    :root {
+      /* Dominant & Supporting Backgrounds */
+      --bg-cream: #FFFDF7;
+      --bg-butter: #FDF6E4;
+      --bg-sand: #F7ECCT;
+      --bg-card: #FFFFFF;
+      --bg-stage: #18222F; /* Deep midnight navy for video spotlight contrast */
+
+      /* Text Colors (WCAG AA compliant) */
+      --text-ink: #1C232B;
+      --text-muted: #4A5562;
+      --text-on-dark: #FFFDF7;
+      --text-muted-dark: #CBD5E1;
+
+      /* Joyful Accents */
+      --accent-sun: #F5A623;       /* Marigold Sunshine */
+      --accent-sun-deep: #B87300;  /* Accessible darker gold for text/borders */
+      --accent-coral: #D94330;     /* Technicolor Coral Red */
+      --accent-sky: #1E6B9E;       /* Singin' in the Rain Sky Blue */
+      --accent-emerald: #1B7A58;   /* Folk Emerald Accent */
+
+      /* Borders & Shadows */
+      --border-warm: #E9DEC5;
+      --shadow-soft: 0 12px 32px -8px rgba(28, 35, 43, 0.08);
+      --shadow-lifted: 0 20px 44px -12px rgba(217, 67, 48, 0.16);
+
+      /* Typography */
+      --font-display: 'Fraunces', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+
+      /* 8px Spacing Scale */
+      --space-1: 0.5rem;   /* 8px */
+      --space-2: 1rem;     /* 16px */
+      --space-3: 1.5rem;   /* 24px */
+      --space-4: 2rem;     /* 32px */
+      --space-6: 3rem;     /* 48px */
+      --space-8: 4rem;     /* 64px */
+      --space-12: 6rem;    /* 96px */
+      --space-16: 8rem;    /* 128px */
+
+      /* Radius */
+      --radius-sm: 10px;
+      --radius-md: 18px;
+      --radius-lg: 28px;
+      --radius-pill: 9999px;
+    }
+
+    /* ==========================================================================
+       2. RESET & BASE STYLES
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      background-color: var(--bg-cream);
+      color: var(--text-ink);
+      font-family: var(--font-sans);
+      font-size: 100%;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      line-height: 1.65;
+      font-size: clamp(1.0625rem, 1rem + 0.25vw, 1.1875rem); /* 17px–19px fluid body */
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 12% 8%, rgba(245, 166, 35, 0.12) 0%, transparent 38%),
+        radial-gradient(circle at 88% 18%, rgba(217, 67, 48, 0.08) 0%, transparent 35%),
+        radial-gradient(circle at 50% 65%, rgba(30, 107, 158, 0.06) 0%, transparent 45%);
+    }
+
+    /* Custom Accessible Focus Styles */
+    :focus-visible {
+      outline: 3px solid var(--accent-coral);
+      outline-offset: 4px;
+      border-radius: 6px;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    /* Comfortable reading measure (~65-70ch) */
+    p {
+      max-width: 66ch;
+    }
+
+    .container {
+      width: min(1200px, 92vw);
+      margin-inline: auto;
+    }
+
+    /* ==========================================================================
+       3. TYPOGRAPHY HIERARCHY
+       ========================================================================== */
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--accent-coral);
+      background: rgba(217, 67, 48, 0.1);
+      padding: 0.4rem 0.9rem;
+      border-radius: var(--radius-pill);
+      margin-bottom: var(--space-2);
+    }
+
+    .eyebrow--sun {
+      color: #FFD166;
+      background: rgba(245, 166, 35, 0.18);
+    }
+
+    .eyebrow--sky {
+      color: var(--accent-sky);
+      background: rgba(30, 107, 158, 0.1);
+    }
+
+    h1, h2, h3 {
+      font-family: var(--font-display);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      font-weight: 800;
+    }
+
+    .display-title {
+      font-size: clamp(3.2rem, 7vw + 1rem, 6.5rem);
+      color: var(--text-ink);
+    }
+
+    .section-title {
+      font-size: clamp(2.1rem, 3.8vw + 0.5rem, 3.5rem);
+      margin-bottom: var(--space-3);
+    }
+
+    .italic-accent {
+      font-style: italic;
+      font-weight: 600;
+      color: var(--accent-coral);
+    }
+
+    /* ==========================================================================
+       4. HEADER & RESPONSIVE NAVIGATION
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 253, 247, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-warm);
+      transition: box-shadow 0.3s ease;
+    }
+
+    .nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 76px;
+    }
+
+    .brand-logo {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--text-ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 0;
+    }
+
+    .brand-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--accent-sun);
+      box-shadow: 0 0 0 3px rgba(245, 166, 35, 0.3);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: var(--space-2);
+      list-style: none;
+    }
+
+    .nav-links a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      padding: 0.5rem 0.9rem;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text-ink);
+      border-radius: var(--radius-pill);
+      transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      background: var(--bg-butter);
+      color: var(--accent-coral);
+    }
+
+    .nav-links .nav-cta {
+      background: var(--accent-coral);
+      color: #FFFFFF;
+      padding-inline: 1.25rem;
+      box-shadow: 0 6px 18px rgba(217, 67, 48, 0.25);
+    }
+
+    .nav-links .nav-cta:hover {
+      background: #B93221;
+      color: #FFFFFF;
+      transform: translateY(-2px);
+    }
+
+    /* Mobile Menu Toggle (44px+ tap target) */
+    .menu-toggle {
+      display: none;
+      width: 48px;
+      height: 48px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-warm);
+      background: var(--bg-card);
+      color: var(--text-ink);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .menu-toggle svg {
+      width: 24px;
+      height: 24px;
+      stroke: currentColor;
+      stroke-width: 2.2;
+      fill: none;
+    }
+
+    /* ==========================================================================
+       5. HERO SECTION (FULL-SCREEN TECHNICOLOR MARQUEE)
+       ========================================================================== */
+    .hero {
+      padding-block: clamp(3rem, 7vw, 6.5rem);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: clamp(2rem, 5vw, 4.5rem);
+      align-items: center;
+    }
+
+    .hero-tagline {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-block: var(--space-3);
+      font-family: var(--font-display);
+      font-size: clamp(1.25rem, 2.2vw, 1.75rem);
+      font-weight: 600;
+    }
+
+    .tagline-pill {
+      padding: 0.35rem 1rem;
+      border-radius: var(--radius-pill);
+      border: 2px solid var(--text-ink);
+      background: var(--bg-card);
+      box-shadow: 3px 3px 0 var(--text-ink);
+    }
+
+    .tagline-pill--sun {
+      background: #FFE599;
+    }
+
+    .tagline-pill--coral {
+      background: #FFD6CE;
+    }
+
+    .tagline-pill--sky {
+      background: #D4ECF9;
+    }
+
+    .hero-lead {
+      font-size: clamp(1.125rem, 1.4vw, 1.35rem);
+      color: var(--text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      min-height: 52px;
+      padding: 0.85rem 1.65rem;
+      font-weight: 700;
+      font-size: 1rem;
+      border-radius: var(--radius-pill);
+      cursor: pointer;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+      border: 2px solid var(--text-ink);
+    }
+
+    .btn-primary {
+      background: var(--accent-sun);
+      color: var(--text-ink);
+      box-shadow: 4px 4px 0 var(--text-ink);
+    }
+
+    .btn-primary:hover {
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0 var(--text-ink);
+      background: #FFB732;
+    }
+
+    .btn-secondary {
+      background: var(--bg-card);
+      color: var(--text-ink);
+      box-shadow: 4px 4px 0 var(--border-warm);
+    }
+
+    .btn-secondary:hover {
+      transform: translate(-2px, -2px);
+      border-color: var(--accent-coral);
+      color: var(--accent-coral);
+    }
+
+    /* Style Badges Ticker */
+    .style-ribbon {
+      margin-top: var(--space-6);
+      padding-top: var(--space-3);
+      border-top: 1px dashed var(--border-warm);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+      align-items: center;
+    }
+
+    .style-ribbon-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-muted);
+      margin-right: 0.5rem;
+    }
+
+    .style-tag {
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.3rem 0.8rem;
+      border-radius: var(--radius-sm);
+      background: var(--bg-butter);
+      border: 1px solid var(--border-warm);
+      color: var(--text-ink);
+    }
+
+    /* Hero Feature Card Frame */
+    .hero-visual {
+      position: relative;
+    }
+
+    .hero-frame {
+      position: relative;
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 3px solid var(--text-ink);
+      box-shadow: 12px 12px 0 var(--accent-sun);
+      background: var(--bg-butter);
+      cursor: pointer;
+    }
+
+    .hero-badge-floating {
+      position: absolute;
+      bottom: -18px;
+      left: -18px;
+      background: var(--bg-card);
+      border: 2px solid var(--text-ink);
+      border-radius: var(--radius-md);
+      padding: 0.9rem 1.2rem;
+      box-shadow: 6px 6px 0 var(--accent-coral);
+      max-width: 260px;
+      z-index: 3;
+    }
+
+    .hero-badge-floating strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      color: var(--text-ink);
+    }
+
+    .hero-badge-floating span {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       6. DESIGNED PHOTO FALLBACK SYSTEM
+       ========================================================================== */
+    .photo-slot {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: linear-gradient(135deg, #FDF2D0 0%, #FCE3CF 52%, #D8ECF8 100%);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: var(--space-3);
+      transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .photo-slot--emerald {
+      background: linear-gradient(135deg, #E2F4EC 0%, #FDF2D0 60%, #FADCD6 100%);
+    }
+
+    .photo-slot--sky {
+      background: linear-gradient(135deg, #D9EDF8 0%, #FDF6E4 60%, #FFE4B5 100%);
+    }
+
+    .photo-slot--coral {
+      background: linear-gradient(135deg, #FDE2DC 0%, #FFF3D1 65%, #E0F0F8 100%);
+    }
+
+    .photo-slot img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: 2;
+      transition: transform 0.5s ease, opacity 0.3s ease;
+    }
+
+    .photo-slot.is-fallback img {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    .fallback-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1;
+    }
+
+    .fallback-filename {
+      font-family: monospace;
+      font-size: 0.78rem;
+      font-weight: 700;
+      background: rgba(255, 255, 255, 0.85);
+      color: var(--text-ink);
+      padding: 0.25rem 0.6rem;
+      border-radius: 6px;
+      border: 1px solid rgba(28, 35, 43, 0.15);
+    }
+
+    .fallback-art {
+      margin: auto;
+      text-align: center;
+      z-index: 1;
+      padding: var(--space-2);
+    }
+
+    .fallback-art svg {
+      width: 54px;
+      height: 54px;
+      stroke: var(--accent-coral);
+      stroke-width: 1.6;
+      fill: none;
+      margin-inline: auto;
+      margin-bottom: 0.5rem;
+    }
+
+    .fallback-title {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-ink);
+      margin-bottom: 0.25rem;
+    }
+
+    .fallback-desc {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      max-width: 28ch;
+      margin-inline: auto;
+    }
+
+    .photo-caption-overlay {
+      position: relative;
+      z-index: 3;
+      background: rgba(28, 35, 43, 0.84);
+      backdrop-filter: blur(8px);
+      color: #FFFDF7;
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-top: auto;
+    }
+
+    .photo-caption-overlay span {
+      font-size: 0.88rem;
+      font-weight: 600;
+    }
+
+    .zoom-pill {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      background: var(--accent-sun);
+      color: var(--text-ink);
+      font-weight: 800;
+      padding: 0.2rem 0.55rem;
+      border-radius: var(--radius-pill);
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       7. SECTION: FEATURED VIDEO REEL (SINGIN' IN THE RAIN, FLAMENCO, JAZZ)
+       ========================================================================== */
+    .video-section {
+      background: var(--bg-stage);
+      color: var(--text-on-dark);
+      padding-block: var(--space-12);
+      position: relative;
+      border-block: 3px solid var(--text-ink);
+    }
+
+    .video-section-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: var(--space-3);
+      margin-bottom: var(--space-6);
+    }
+
+    .video-section-header p {
+      color: var(--text-muted-dark);
+    }
+
+    /* Asymmetric Editorial Video Layout: 1 Featured Hero Video + 2 Side-by-Side */
+    .video-showcase-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--space-4);
+    }
+
+    .video-card {
+      background: #233042;
+      border: 2px solid rgba(255, 253, 247, 0.16);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      transition: transform 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .video-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-sun);
+    }
+
+    .video-card--featured {
+      grid-column: span 12;
+      background: linear-gradient(145deg, #243347 0%, #1B2635 100%);
+      border: 2px solid var(--accent-sun);
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .video-card--half {
+      grid-column: span 6;
+    }
+
+    .video-embed-wrap {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #0F1620;
+    }
+
+    .video-embed-wrap iframe,
+    .video-embed-wrap video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      object-fit: contain;
+      background: #0F1620;
+    }
+
+    .video-info {
+      padding: var(--space-3);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      flex: 1;
+    }
+
+    .video-meta-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .video-badge {
+      font-size: 0.78rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 0.25rem 0.7rem;
+      border-radius: var(--radius-pill);
+      background: var(--accent-sun);
+      color: var(--text-ink);
+    }
+
+    .video-badge--coral {
+      background: #FF7B6B;
+      color: var(--text-ink);
+    }
+
+    .video-badge--sky {
+      background: #7CC8F8;
+      color: var(--text-ink);
+    }
+
+    .video-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.35rem, 2vw, 1.85rem);
+      color: #FFFDF7;
+    }
+
+    .video-desc {
+      color: var(--text-muted-dark);
+      font-size: 0.98rem;
+    }
+
+    .video-direct-link {
+      margin-top: auto;
+      padding-top: 0.75rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: #FFD166;
+    }
+
+    .video-direct-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ==========================================================================
+       8. SECTION: MY STORY & THE MAGIC OF PARTNERING
+       ========================================================================== */
+    .story-section {
+      padding-block: var(--space-12);
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: clamp(2rem, 5vw, 5rem);
+      align-items: start;
+    }
+
+    .pull-quote-card {
+      background: var(--bg-butter);
+      border: 3px solid var(--text-ink);
+      border-radius: var(--radius-lg);
+      padding: clamp(1.75rem, 3.5vw, 3rem);
+      box-shadow: 10px 10px 0 var(--accent-coral);
+      position: relative;
+    }
+
+    .pull-quote-text {
+      font-family: var(--font-display);
+      font-size: clamp(1.45rem, 2.3vw, 2.1rem);
+      line-height: 1.3;
+      color: var(--text-ink);
+      margin-bottom: var(--space-3);
+    }
+
+    .passport-box {
+      margin-top: var(--space-4);
+      padding: var(--space-3);
+      background: var(--bg-card);
+      border: 2px solid var(--border-warm);
+      border-radius: var(--radius-md);
+    }
+
+    .passport-title {
+      font-size: 0.85rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-sky);
+      margin-bottom: var(--space-2);
+    }
+
+    .passport-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .passport-chip {
+      font-size: 0.9rem;
+      font-weight: 600;
+      padding: 0.35rem 0.85rem;
+      border-radius: var(--radius-pill);
+      background: #EDF6FC;
+      color: var(--text-ink);
+      border: 1px solid #BFE0F5;
+    }
+
+    .story-copy p + p {
+      margin-top: var(--space-3);
+    }
+
+    .three-pillars {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-2);
+      margin-top: var(--space-4);
+    }
+
+    .pillar-card {
+      background: var(--bg-card);
+      border: 2px solid var(--text-ink);
+      border-radius: var(--radius-md);
+      padding: var(--space-2);
+      box-shadow: 4px 4px 0 var(--accent-sun);
+    }
+
+    .pillar-card h3 {
+      font-size: 1.15rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .pillar-card p {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    /* ==========================================================================
+       9. SECTION: MAGAZINE PHOTO SPREAD & LIGHTBOX GALLERY
+       ========================================================================== */
+    .gallery-section {
+      padding-block: var(--space-12);
+      background: var(--bg-butter);
+      border-top: 2px solid var(--border-warm);
+      border-bottom: 2px solid var(--border-warm);
+    }
+
+    .gallery-header {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-end;
+      gap: var(--space-2);
+      margin-bottom: var(--space-6);
+    }
+
+    /* Asymmetric Magazine Spread Grid */
+    .magazine-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: var(--space-3);
+      align-items: stretch;
+    }
+
+    .gallery-item {
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      border: 3px solid var(--text-ink);
+      background: var(--bg-card);
+      cursor: pointer;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .gallery-item:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 8px 8px 0 var(--text-ink);
+    }
+
+    .gallery-item--tall {
+      grid-column: span 5;
+      aspect-ratio: 3 / 4;
+    }
+
+    .gallery-item--square {
+      grid-column: span 7;
+      aspect-ratio: 16 / 11;
+    }
+
+    .gallery-item--wide {
+      grid-column: span 7;
+      aspect-ratio: 16 / 10;
+    }
+
+    .gallery-item--portrait {
+      grid-column: span 5;
+      aspect-ratio: 4 / 4.3;
+    }
+
+    /* ==========================================================================
+       10. SECTION: EXPERIENCE, TRAINING & TEACHING
+       ========================================================================== */
+    .experience-section {
+      padding-block: var(--space-12);
+    }
+
+    .exp-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--space-4);
+      margin-top: var(--space-6);
+    }
+
+    .exp-card {
+      background: var(--bg-card);
+      border: 2px solid var(--text-ink);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      box-shadow: 6px 6px 0 var(--border-warm);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-2);
+    }
+
+    .exp-card--highlight {
+      box-shadow: 6px 6px 0 var(--accent-sun);
+    }
+
+    .exp-role-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent-coral);
+    }
+
+    .exp-card h3 {
+      font-size: 1.5rem;
+    }
+
+    .exp-list {
+      padding-left: 1.2rem;
+      color: var(--text-muted);
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    /* Bonus Superpower Banner: Dance + Photography + ASL */
+    .superpower-banner {
+      margin-top: var(--space-6);
+      background: linear-gradient(120deg, #FFF3CC 0%, #FFE2D9 50%, #DCF0FA 100%);
+      border: 2px solid var(--text-ink);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-3);
+    }
+
+    /* ==========================================================================
+       11. SECTION: CONTACT & FOOTER
+       ========================================================================== */
+    .contact-section {
+      padding-block: var(--space-12);
+      background: var(--bg-butter);
+      border-top: 3px solid var(--text-ink);
+      text-align: center;
+    }
+
+    .contact-card {
+      max-width: 760px;
+      margin-inline: auto;
+      background: var(--bg-card);
+      border: 3px solid var(--text-ink);
+      border-radius: var(--radius-lg);
+      padding: clamp(2rem, 5vw, 4rem);
+      box-shadow: 12px 12px 0 var(--accent-sun);
+    }
+
+    .contact-card p {
+      margin-inline: auto;
+      color: var(--text-muted);
+      margin-bottom: var(--space-4);
+    }
+
+    .email-pill-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: var(--space-2);
+    }
+
+    .site-footer {
+      padding-block: var(--space-4);
+      background: var(--bg-cream);
+      border-top: 1px solid var(--border-warm);
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-2);
+    }
+
+    /* ==========================================================================
+       12. LIGHTBOX MODAL (KEYBOARD ACCESSIBLE, ESC TO CLOSE)
+       ========================================================================== */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(24, 34, 47, 0.92);
+      backdrop-filter: blur(10px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-3);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.25s ease;
+    }
+
+    .lightbox.is-open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .lightbox-dialog {
+      max-width: 900px;
+      width: 100%;
+      background: var(--bg-cream);
+      border: 3px solid var(--text-ink);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5);
+    }
+
+    .lightbox-media {
+      aspect-ratio: 16 / 10;
+      max-height: 70vh;
+      width: 100%;
+      position: relative;
+      background: #18222F;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .lightbox-media img {
+      max-height: 70vh;
+      width: auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
+
+    .lightbox-bar {
+      padding: var(--space-2) var(--space-3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-2);
+      background: var(--bg-card);
+      border-top: 2px solid var(--border-warm);
+    }
+
+    .lightbox-close {
+      min-height: 44px;
+      padding: 0.5rem 1.1rem;
+      border-radius: var(--radius-pill);
+      border: 2px solid var(--text-ink);
+      background: var(--accent-sun);
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    /* ==========================================================================
+       13. SCROLL REVEAL & REDUCED MOTION
+       ========================================================================== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(22px);
+      transition: opacity 0.65s ease, transform 0.65s cubic-bezier(0.22, 1, 0.36, 1);
+    }
+
+    .reveal.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      .reveal {
+        opacity: 1;
+        transform: none;
+      }
+    }
+
+    /* ==========================================================================
+       14. RESPONSIVE BREAKPOINTS (MOBILE FIRST POLISH)
+       ========================================================================== */
+    @media (max-width: 960px) {
+      .hero-grid,
+      .story-grid,
+      .exp-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-visual {
+        max-width: 500px;
+        margin-inline: auto;
+        width: 100%;
+      }
+
+      .video-card--half {
+        grid-column: span 12;
+      }
+
+      .gallery-item--tall,
+      .gallery-item--square,
+      .gallery-item--wide,
+      .gallery-item--portrait {
+        grid-column: span 6;
+        aspect-ratio: 4 / 4.2;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .three-pillars {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-item--tall,
+      .gallery-item--square,
+      .gallery-item--wide,
+      .gallery-item--portrait {
+        grid-column: span 12;
+        aspect-ratio: 4 / 4.2;
+      }
+
+      .hero-badge-floating {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        margin-top: var(--space-2);
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .menu-toggle {
+        display: inline-flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 76px;
+        left: 0;
+        right: 0;
+        background: var(--bg-cream);
+        border-bottom: 2px solid var(--text-ink);
+        flex-direction: column;
+        align-items: stretch;
+        padding: var(--space-3);
+        gap: 0.5rem;
+        box-shadow: var(--shadow-soft);
+        display: none;
+      }
+
+      .nav-links.is-open {
+        display: flex;
+      }
+
+      .nav-links a {
+        justify-content: center;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ======================= HEADER & NAVIGATION ======================= -->
+  <header class="site-header">
+    <div class="container nav-bar">
+      <a href="#top" class="brand-logo" aria-label="Emily W. Home">
+        <span class="brand-dot" aria-hidden="true"></span>
+        Emily W.
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="primaryNav" aria-label="Toggle Menu">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links" id="primaryNav">
+          <li><a href="#videos">Watch</a></li>
+          <li><a href="#story">My Story</a></li>
+          <li><a href="#gallery">Photos</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#contact" class="nav-cta">Say Hello</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ======================= HERO SECTION ======================= -->
+    <section class="hero container">
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <span class="eyebrow">Provo, Utah • 5+ Years in Motion</span>
+          <h1 class="display-title">Emily W.</h1>
+
+          <div class="hero-tagline" aria-label="Choreographer. Freestyle Artist. Mover.">
+            <span class="tagline-pill tagline-pill--sun">Choreographer.</span>
+            <span class="tagline-pill tagline-pill--coral">Freestyle Artist.</span>
+            <span class="tagline-pill tagline-pill--sky">Mover.</span>
+          </div>
+
+          <p class="hero-lead">
+            From the magic of Ballroom partnering and the percussive spark of Tap &amp; Clogging to global Folk traditions—even choreographing an aerial routine in tap shoes to <em>Singin’ in the Rain</em>.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#videos" class="btn btn-primary">
+              Watch My Reel (3 Videos)
+            </a>
+            <a href="#contact" class="btn btn-secondary">
+              Book or Collaborate
+            </a>
+          </div>
+
+          <div class="style-ribbon" aria-label="Core Dance Styles">
+            <span class="style-ribbon-label">Core Styles:</span>
+            <span class="style-tag">Ballroom &amp; Swing</span>
+            <span class="style-tag">International Folk</span>
+            <span class="style-tag">Tap &amp; Clogging</span>
+            <span class="style-tag">Aerial Tap</span>
+            <span class="style-tag">Jazz &amp; Contemporary</span>
+          </div>
+        </div>
+
+        <!-- Hero Visual Frame -->
+        <div class="hero-visual reveal">
+          <div class="hero-frame gallery-trigger" 
+               tabindex="0" 
+               role="button"
+               data-slot-target="folk-duet"
+               data-img="media/Indian Costume.jpg"
+               data-title="International Folk Dance Rehearsal"
+               data-caption="Indian folk dance duet in crimson, magenta, and emerald costume at BYU.">
+            <div class="photo-slot photo-slot--emerald is-fallback">
+              <img src="media/Indian Costume.jpg" 
+                   alt="Emily W. and her dance partner smiling in vibrant red, pink, and emerald green Indian folk dance costumes with raised mudra hands in a studio."
+                   onload="this.parentElement.classList.remove('is-fallback')"
+                   onerror="if(!this.dataset.triedAlt){this.dataset.triedAlt='1';this.src='images/folk-duet.jpg';}else{this.parentElement.classList.add('is-fallback');}">
+              
+              <div class="fallback-top">
+                <span class="fallback-filename">media/Indian Costume.jpg</span>
+                <span class="fallback-filename">Hero Portrait</span>
+              </div>
+
+              <div class="fallback-art">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <circle cx="12" cy="5" r="2.5"/>
+                  <path d="M7 11c2.5-1.5 7.5-1.5 10 0l-2.5 5.5 2.5 4.5M9.5 16.5L7 21"/>
+                </svg>
+                <div class="fallback-title">Folk Dance Studio Duet</div>
+                <p class="fallback-desc">Your Indian folk costume photo in crimson, magenta, emerald &amp; gold.</p>
+              </div>
+
+              <div class="photo-caption-overlay">
+                <span>International Folk Ensemble • Studio Duet</span>
+                <span class="zoom-pill">Enlarge</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-badge-floating">
+            <strong>“Singin’ in the Rain” Energy</strong>
+            <span>Tap Club President • BYU BA in Dance • Instructor</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= FEATURED VIDEO REEL SECTION ======================= -->
+    <section id="videos" class="video-section">
+      <div class="container">
+        <div class="video-section-header reveal">
+          <div>
+            <span class="eyebrow eyebrow--sun">In Motion • Performance &amp; Choreography</span>
+            <h2 class="section-title" style="margin-bottom:0;">Featured Video Reel</h2>
+          </div>
+          <p>
+            From airborne tap choreography to <em>Singin’ in the Rain</em> and studio tap footwork to fiery Flamenco and collegiate Jazz.
+          </p>
+        </div>
+
+        <div class="video-showcase-grid">
+          <!-- Featured Showstopper: Aerial Tap to Singin' in the Rain -->
+          <article class="video-card video-card--featured reveal">
+            <div class="video-embed-wrap">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/BGi-iOTSmKs?rel=0" 
+                title="Emily W. — Aerial Dance in Tap Shoes to Singin' in the Rain"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="video-info">
+              <div class="video-meta-row">
+                <span class="video-badge">Signature Choreography • Aerial + Tap</span>
+              </div>
+              <h3 class="video-title">Aerial Dance in Tap Shoes — “Singin’ in the Rain”</h3>
+              <p class="video-desc">
+                An original aerial piece choreographed and performed with tap shoes on—blending classic Hollywood musical joy with unexpected airborne rhythm.
+              </p>
+              <a class="video-direct-link" href="https://youtu.be/BGi-iOTSmKs" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Video 2: Flamenco Dance -->
+          <article class="video-card video-card--half reveal">
+            <div class="video-embed-wrap">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/QNkdfyxl87I?rel=0" 
+                title="Emily W. — Flamenco Folk Dance Performance"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="video-info">
+              <div class="video-meta-row">
+                <span class="video-badge video-badge--coral">World Folk • Percussive</span>
+              </div>
+              <h3 class="video-title">Flamenco Study &amp; Performance</h3>
+              <p class="video-desc">
+                Fierce posture, rhythmic precision, and expressive upper-body carriage inspired by four years of intensive folk study.
+              </p>
+              <a class="video-direct-link" href="https://youtu.be/QNkdfyxl87I" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube ↗
+              </a>
+            </div>
+          </article>
+
+          <!-- Video 3: Jazz Midterm -->
+          <article class="video-card video-card--half reveal">
+            <div class="video-embed-wrap">
+              <iframe 
+                src="https://www.youtube-nocookie.com/embed/EI1Eb7gN01M?rel=0" 
+                title="Emily W. — Jazz Midterm Performance"
+                loading="lazy"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                allowfullscreen>
+              </iframe>
+            </div>
+            <div class="video-info">
+              <div class="video-meta-row">
+                <span class="video-badge video-badge--sky">Collegiate Training • Jazz</span>
+              </div>
+              <h3 class="video-title">Jazz Midterm Performance</h3>
+              <p class="video-desc">
+                Dynamic musicality, crisp lines, and joyful stage presence from collegiate dance training at Brigham Young University.
+              </p>
+              <a class="video-direct-link" href="https://youtu.be/EI1Eb7gN01M" target="_blank" rel="noopener noreferrer">
+                Watch on YouTube ↗
+              </a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= MY STORY SECTION ======================= -->
+    <section id="story" class="story-section container">
+      <div class="story-grid">
+        <!-- Left Column: Signature Quote & Global Folk Passport -->
+        <div class="reveal">
+          <div class="pull-quote-card">
+            <span class="eyebrow">Why I Move</span>
+            <blockquote class="pull-quote-text">
+              “Ballroom is my favorite—I love the <span class="italic-accent">magic feeling of being led</span> and making brand-new movement together with a partner.”
+            </blockquote>
+            <p>
+              Whether it’s reading a partner’s frame on the ballroom floor, trading percussive rhythms in tap and clogging shoes, or stepping into centuries-old folk dances, movement for me is pure connection and joy.
+            </p>
+
+            <div class="passport-box">
+              <div class="passport-title">Global Folk &amp; Footwork Passport</div>
+              <div class="passport-chips">
+                <span class="passport-chip">Flamenco</span>
+                <span class="passport-chip">Hungarian</span>
+                <span class="passport-chip">Ukrainian</span>
+                <span class="passport-chip">African</span>
+                <span class="passport-chip">Bulgarian</span>
+                <span class="passport-chip">Indian</span>
+                <span class="passport-chip">Appalachian Clogging</span>
+                <span class="passport-chip">Rhythm Tap</span>
+                <span class="passport-chip">Vintage Swing</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Narrative Bio -->
+        <div class="story-copy reveal">
+          <span class="eyebrow eyebrow--sky">My Story • 5 Years of Rhythm</span>
+          <h2 class="section-title">Partnering, Percussive Footwork &amp; Playful Curiosity</h2>
+
+          <p>
+            My love affair with dance began in a Ballroom class at fifteen—and when I returned to the studio in 2021, I dove in headfirst and never looked back. Over the past five years while pursuing my Bachelor of Arts in Dance at Brigham Young University, I’ve built a movement vocabulary rooted in joy, musicality, and fearless experimentation.
+          </p>
+
+          <p>
+            For four years, I performed with BYU’s collegiate folk dance teams—appearing every semester in <em>Christmas Around the World</em> and <em>Festival of Nations</em>—immersing myself in cultural styles from across the globe alongside heavy training in clogging and tap.
+          </p>
+
+          <p>
+            As Tap Club President and a choreographer who isn’t afraid to strap on tap shoes for an aerial silk routine, I love finding the unexpected places where styles meet—and sharing that spark with my students every week.
+          </p>
+
+          <div class="three-pillars">
+            <div class="pillar-card">
+              <h3>Ballroom</h3>
+              <p>Placed competitively in Rumba, Samba, Quickstep, Foxtrot &amp; Cha-Cha.</p>
+            </div>
+            <div class="pillar-card">
+              <h3>Folk &amp; Swing</h3>
+              <p>4 years on collegiate folk teams + Vintage Swing Dance productions.</p>
+            </div>
+            <div class="pillar-card">
+              <h3>Tap &amp; Aerial</h3>
+              <p>Tap Club President, heavy clogging study &amp; original aerial tap work.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= PHOTO GALLERY SECTION ======================= -->
+    <section id="gallery" class="gallery-section">
+      <div class="container">
+        <div class="gallery-header reveal">
+          <div>
+            <span class="eyebrow">Visual Spread • Click Any Frame to Enlarge</span>
+            <h2 class="section-title">Moments from the Studio &amp; Stage</h2>
+          </div>
+          <p>
+            Ready for your photos in the <code>images/</code> folder—with custom Technicolor cards holding any spot until you drop a picture in.
+          </p>
+        </div>
+
+        <div class="magazine-grid">
+          <!-- Photo 1: Folk Dance Duet (Uploaded Photo 1) -->
+          <div class="gallery-item gallery-item--tall gallery-trigger reveal"
+               tabindex="0"
+               role="button"
+               data-slot-target="folk-duet"
+               data-img="media/Indian Costume.jpg"
+               data-title="Indian Folk Costume — Studio Rehearsal"
+               data-caption="Back-to-back mudra pose in traditional red, magenta, and emerald green Indian folk attire.">
+            <div class="photo-slot photo-slot--emerald is-fallback">
+              <img src="media/Indian Costume.jpg"
+                   loading="lazy"
+                   alt="Emily W. and a fellow dancer posing back-to-back in ornate crimson, magenta, and emerald Indian folk costumes during rehearsal."
+                   onload="this.parentElement.classList.remove('is-fallback')"
+                   onerror="if(!this.dataset.triedAlt){this.dataset.triedAlt='1';this.src='images/folk-duet.jpg';}else{this.parentElement.classList.add('is-fallback');}">
+              <div class="fallback-top">
+                <span class="fallback-filename">media/Indian Costume.jpg</span>
+                <span class="fallback-filename">Photo 01</span>
+              </div>
+              <div class="fallback-art">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 3v18M5 8l7-5 7 5M5 16l7 5 7-5"/>
+                </svg>
+                <div class="fallback-title">Indian Folk Duet</div>
+                <p class="fallback-desc">Your uploaded studio rehearsal photo in jewel-toned folk dress.</p>
+              </div>
+              <div class="photo-caption-overlay">
+                <span>01 • International Folk Studio Duet</span>
+                <span class="zoom-pill">View</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 2: Tap / Clogging Action Shot (Uploaded Photo 2) -->
+          <div class="gallery-item gallery-item--square gallery-trigger reveal"
+               tabindex="0"
+               role="button"
+               data-slot-target="tap-action"
+               data-img="images/tap-action.jpg"
+               data-title="Tap & Clogging Footwork in Action"
+               data-caption="Mid-step percussive footwork in white tap/clogging shoes in the rehearsal studio.">
+            <div class="photo-slot photo-slot--sky is-fallback">
+              <img src="images/tap-action.jpg"
+                   loading="lazy"
+                   alt="Emily W. dancing mid-step in white tap and clogging shoes against a geometric studio wall."
+                   onload="this.parentElement.classList.remove('is-fallback')"
+                   onerror="this.parentElement.classList.add('is-fallback')">
+              <div class="fallback-top">
+                <span class="fallback-filename">images/tap-action.jpg</span>
+                <span class="fallback-filename">Photo 02</span>
+              </div>
+              <div class="fallback-art">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M4 16l6-6 4 4 6-8"/>
+                  <circle cx="20" cy="6" r="2"/>
+                </svg>
+                <div class="fallback-title">Tap &amp; Clogging Footwork</div>
+                <p class="fallback-desc">Your uploaded action screenshot in white tap/clogging shoes.</p>
+              </div>
+              <div class="photo-caption-overlay">
+                <span>02 • Rhythm Tap &amp; Clogging Action</span>
+                <span class="zoom-pill">View</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 3: Ballroom Feature Slot -->
+          <div class="gallery-item gallery-item--wide gallery-trigger reveal"
+               tabindex="0"
+               role="button"
+               data-slot-target="ballroom-feature"
+               data-img="images/ballroom-feature.jpg"
+               data-title="Ballroom Partnering & Dancesport"
+               data-caption="Rumba, Samba, Quickstep, Foxtrot & Cha-Cha partnering.">
+            <div class="photo-slot photo-slot--coral is-fallback">
+              <img src="images/ballroom-feature.jpg"
+                   loading="lazy"
+                   alt="Emily W. performing a ballroom dance partnering routine."
+                   onload="this.parentElement.classList.remove('is-fallback')"
+                   onerror="this.parentElement.classList.add('is-fallback')">
+              <div class="fallback-top">
+                <span class="fallback-filename">images/ballroom-feature.jpg</span>
+                <span class="fallback-filename">Photo 03 (Optional)</span>
+              </div>
+              <div class="fallback-art">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 21s-7-4.5-7-10a4 4 0 0 1 7-2.5A4 4 0 0 1 19 11c0 5.5-7 10-7 10z"/>
+                </svg>
+                <div class="fallback-title">The Magic of Ballroom</div>
+                <p class="fallback-desc">Optional slot: drop in a favorite Ballroom partnering photo or video still anytime.</p>
+              </div>
+              <div class="photo-caption-overlay">
+                <span>03 • Ballroom &amp; Vintage Swing</span>
+                <span class="zoom-pill">View</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Photo 4: Aerial Tap Feature Slot -->
+          <div class="gallery-item gallery-item--portrait gallery-trigger reveal"
+               tabindex="0"
+               role="button"
+               data-slot-target="aerial-feature"
+               data-img="images/aerial-feature.jpg"
+               data-title="Aerial Choreography in Tap Shoes"
+               data-caption="Original aerial routine performed to Singin' in the Rain.">
+            <div class="photo-slot is-fallback">
+              <img src="images/aerial-feature.jpg"
+                   loading="lazy"
+                   alt="Emily W. performing an aerial routine wearing tap shoes."
+                   onload="this.parentElement.classList.remove('is-fallback')"
+                   onerror="this.parentElement.classList.add('is-fallback')">
+              <div class="fallback-top">
+                <span class="fallback-filename">images/aerial-feature.jpg</span>
+                <span class="fallback-filename">Photo 04 (Optional)</span>
+              </div>
+              <div class="fallback-art">
+                <svg viewBox="0 0 24 24" aria-hidden="true">
+                  <path d="M12 2v20M7 7l5-5 5 5M8 14c2 2 6 2 8 0"/>
+                </svg>
+                <div class="fallback-title">Aerial Tap Showstopper</div>
+                <p class="fallback-desc">Optional slot: save a still frame from your “Singin’ in the Rain” aerial video as <code>aerial-feature.jpg</code>.</p>
+              </div>
+              <div class="photo-caption-overlay">
+                <span>04 • Aerial Dance in Tap Shoes</span>
+                <span class="zoom-pill">View</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================= EXPERIENCE & TRAINING SECTION ======================= -->
+    <section id="experience" class="experience-section container">
+      <div class="reveal">
+        <span class="eyebrow">Stage, Studio &amp; Classroom</span>
+        <h2 class="section-title">Experience &amp; Artistic Highlights</h2>
+        <p>
+          Combining collegiate dance pedagogy at Brigham Young University with competitive Ballroom, international stage productions, and youth dance instruction.
+        </p>
+      </div>
+
+      <div class="exp-grid">
+        <!-- Card 1: Collegiate & Stage Performance -->
+        <article class="exp-card exp-card--highlight reveal">
+          <div class="exp-role-meta">
+            <span>Brigham Young University • 2022–2025</span>
+            <span>4 Years</span>
+          </div>
+          <h3>International Folk Dance &amp; Vintage Swing</h3>
+          <ul class="exp-list">
+            <li>Performed every semester in BYU’s flagship productions <em>Christmas Around the World</em> and <em>Festival of Nations</em>.</li>
+            <li>Heavily studied and performed global styles including Flamenco, Hungarian, Ukrainian, African, Bulgarian, Indian, and Appalachian Clogging.</li>
+            <li>Performed as a team member in collegiate and community <strong>Vintage Swing Dance Team</strong> productions.</li>
+          </ul>
+        </article>
+
+        <!-- Card 2: Choreography, Tap & Ballroom -->
+        <article class="exp-card exp-card--highlight reveal">
+          <div class="exp-role-meta">
+            <span>Leadership &amp; Competition</span>
+            <span>Award-Winning</span>
+          </div>
+          <h3>Ballroom, Tap Club President &amp; Aerial</h3>
+          <ul class="exp-list">
+            <li><strong>Competitive Ballroom:</strong> Placed across multiple Dancesport styles including Rumba, Samba, Quickstep, Foxtrot, and Cha-Cha; Florida Ballroom Dance Tour alumnus.</li>
+            <li><strong>Tap Club President:</strong> Led collegiate tap community and choreographed an original <strong>Aerial Tap</strong> work to <em>Singin’ in the Rain</em>.</li>
+            <li><strong>Musical Theatre Leads:</strong> Featured lead roles in <em>Princess Academy</em>, <em>Honk! Jr.</em>, and <em>Seussical the Musical</em>.</li>
+          </ul>
+        </article>
+
+        <!-- Card 3: Teaching & Coaching -->
+        <article class="exp-card reveal">
+          <div class="exp-role-meta">
+            <span>Provo School of the Arts • Present</span>
+            <span>Educator</span>
+          </div>
+          <h3>Dance &amp; Movement Instructor</h3>
+          <ul class="exp-list">
+            <li>Design and teach joyful, structured lessons and choreography for students ages 3–15.</li>
+            <li>Trained at BYU to instruct Ballet, Ballroom, Tap, Contemporary, Folk, Hip-Hop, Tumbling, and creative youth movement.</li>
+            <li>Certified <strong>Zumba Instructor</strong> &amp; <strong>UpBeat Barre</strong> Ballet Fitness instructor-in-training.</li>
+          </ul>
+        </article>
+
+        <!-- Card 4: Education -->
+        <article class="exp-card reveal">
+          <div class="exp-role-meta">
+            <span>Brigham Young University • Expected April 2027</span>
+            <span>B.A. in Dance</span>
+          </div>
+          <h3>Bachelor of Arts in Dance</h3>
+          <ul class="exp-list">
+            <li>Comprehensive pedagogical training in teaching methodology for children, teens, and adults.</li>
+            <li>Specialized coursework in choreography, aerial arts, multi-genre technique, and performance nutrition for dancers and endurance athletes.</li>
+          </ul>
+        </article>
+      </div>
+
+      <!-- Creative Edge Banner -->
+      <div class="superpower-banner reveal">
+        <div>
+          <span class="eyebrow">Beyond the Dance Floor</span>
+          <h3 style="font-size: 1.4rem; margin-bottom: 0.25rem;">A Photographer’s Eye + A Marathoner’s Stamina</h3>
+          <p style="color: var(--text-muted);">
+            With 5+ years as a professional portrait &amp; event photographer (Adobe Lightroom specialist), marathon &amp; triathlon finisher, and conversational American Sign Language (ASL) speaker, I bring visual storytelling and boundless energy to every project.
+          </p>
+        </div>
+        <a href="#contact" class="btn btn-primary">Let’s Work Together</a>
+      </div>
+    </section>
+
+    <!-- ======================= CONTACT SECTION ======================= -->
+    <section id="contact" class="contact-section">
+      <div class="container">
+        <div class="contact-card reveal">
+          <span class="eyebrow">Bookings, Choreography &amp; Classes</span>
+          <h2 class="section-title">Let’s Make Something Joyful</h2>
+          <p>
+            Looking for a Ballroom partner, a guest choreographer, a high-energy Tap/Folk/Barre instructor, or a dancer for your next production? Send me a note!
+          </p>
+
+          <div class="email-pill-group">
+            <a href="mailto:winegarem@gmail.com?subject=Dance%20Inquiry%20for%20Emily%20W." class="btn btn-primary">
+              Email winegarem@gmail.com
+            </a>
+            <button type="button" class="btn btn-secondary" id="copyEmailBtn" data-email="winegarem@gmail.com">
+              Copy Email Address
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>Emily W.</strong> — Choreographer. Freestyle Artist. Mover.
+      </div>
+      <div>
+        &copy; <span id="currentYear">2026</span> Emily Winegar. Crafted with Technicolor sunshine in Provo, Utah.
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================= ACCESSIBLE LIGHTBOX MODAL ======================= -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lightboxTitle" aria-hidden="true">
+    <div class="lightbox-dialog">
+      <div class="lightbox-media" id="lightboxMedia">
+        <img src="" alt="" id="lightboxImg">
+      </div>
+      <div class="lightbox-bar">
+        <div>
+          <strong id="lightboxTitle" style="display:block; font-family: var(--font-display);">Photo Title</strong>
+          <span id="lightboxCaption" style="font-size: 0.9rem; color: var(--text-muted);">Photo caption</span>
+        </div>
+        <button type="button" class="lightbox-close" id="lightboxClose" aria-label="Close enlarged photo (Esc)">
+          Close (Esc)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= INTERACTIVITY SCRIPT ======================= -->
+  <script>
+    // 1. Dynamic Year in Footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+    // 2. Mobile Navigation Menu Toggle
+    const menuToggle = document.getElementById('menuToggle');
+    const primaryNav = document.getElementById('primaryNav');
+
+    if (menuToggle && primaryNav) {
+      menuToggle.addEventListener('click', () => {
+        const isOpen = primaryNav.classList.toggle('is-open');
+        menuToggle.setAttribute('aria-expanded', String(isOpen));
+      });
+
+      // Close mobile menu when a link is clicked
+      primaryNav.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          primaryNav.classList.remove('is-open');
+          menuToggle.setAttribute('aria-expanded', 'false');
+        });
+      });
+    }
+
+    // 3. Copy Email Button (Safe fallback for all browsers)
+    const copyEmailBtn = document.getElementById('copyEmailBtn');
+    if (copyEmailBtn) {
+      copyEmailBtn.addEventListener('click', () => {
+        const email = copyEmailBtn.getAttribute('data-email');
+        const tempInput = document.createElement('textarea');
+        tempInput.value = email;
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        try {
+          document.execCommand('copy');
+          const originalText = copyEmailBtn.textContent;
+          copyEmailBtn.textContent = 'Copied: ' + email + ' ✓';
+          setTimeout(() => {
+            copyEmailBtn.textContent = originalText;
+          }, 2600);
+        } catch (err) {
+          copyEmailBtn.textContent = email;
+        }
+        document.body.removeChild(tempInput);
+      });
+    }
+
+    // 4. Accessible Lightbox for Gallery & Hero Photos
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightboxImg');
+    const lightboxTitle = document.getElementById('lightboxTitle');
+    const lightboxCaption = document.getElementById('lightboxCaption');
+    const lightboxClose = document.getElementById('lightboxClose');
+    let lastFocusedElement = null;
+
+    function openLightbox(trigger) {
+      lastFocusedElement = trigger;
+      const imgSrc = trigger.getAttribute('data-img');
+      const title = trigger.getAttribute('data-title') || 'Emily W. Dance Portfolio';
+      const caption = trigger.getAttribute('data-caption') || '';
+      const innerImg = trigger.querySelector('img');
+      const altText = innerImg ? innerImg.getAttribute('alt') : title;
+
+      lightboxTitle.textContent = title;
+      lightboxCaption.textContent = caption;
+      lightboxImg.src = imgSrc;
+      lightboxImg.alt = altText;
+
+      // Graceful visual if real local photo isn't in the folder yet
+      lightboxImg.onerror = () => {
+        lightboxImg.style.display = 'none';
+      };
+      lightboxImg.onload = () => {
+        lightboxImg.style.display = 'block';
+      };
+
+      lightbox.classList.add('is-open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      lightboxClose.focus();
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('is-open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    }
+
+    document.querySelectorAll('.gallery-trigger').forEach(item => {
+      item.addEventListener('click', () => openLightbox(item));
+      item.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          openLightbox(item);
+        }
+      });
+    });
+
+    lightboxClose.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.classList.contains('is-open')) {
+        closeLightbox();
+      }
+    });
+
+    // 5. Gentle Scroll Reveal via IntersectionObserver
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealItems.forEach(el => observer.observe(el));
+    } else {
+      revealItems.forEach(el => el.classList.add('is-visible'));
+    }
+  </script>
+</body>
+</html>
